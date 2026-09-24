@@ -22,7 +22,7 @@ export default function PieCard({ pie, category }: { pie: Pie; category: string 
             <b className="block text-base text-brown">{pie.calories}</b>سعرة · kcal
           </span>
           <span>
-            <b className="block text-base text-leaf">{pie.protein}g</b>بروتين · protein
+            <b className="block text-base text-leaf">{pie.protein.toFixed(1)}g</b>بروتين · protein
           </span>
         </div>
         <span className="rounded-2xl bg-orange px-3 py-1 text-2xl font-extrabold text-white">
