@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import PieCard from "@/components/PieCard";
-import PieArt from "@/components/PieArt";
+import Image from "next/image";
 import { pieById, boxes } from "@/data/menu";
 
 const highlights = [
-  { id: "tawook", category: "premium" },
+  { id: "beef-shawarma", category: "premium" },
   { id: "chicken-kishna", category: "breakfast" },
-  { id: "kunafa", category: "dessert" },
+  { id: "egg-beef", category: "breakfast" },
 ];
 
 const facts = [
@@ -40,9 +40,17 @@ export default function Home() {
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-md">
-            <div className="absolute inset-6 rounded-full bg-cream/25 blur-2xl" />
-            <PieArt category="breakfast" className="relative w-full drop-shadow-2xl" />
-            <PieArt category="premium" className="relative -mt-16 ms-16 w-2/3 drop-shadow-2xl" />
+            <div className="absolute inset-8 rounded-full bg-cream/40 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-white shadow-pop">
+              <Image
+                src="/menu/egg-beef.jpg"
+                alt="فطيرة البيض مع اللحم · Egg with Beef Pie"
+                width={800}
+                height={800}
+                priority
+                className="aspect-square w-full object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { boxes, pieById } from "@/data/menu";
 
 export const metadata: Metadata = { title: "البوكسات | Ajeena Ajeeba Boxes" };
@@ -20,6 +21,17 @@ export default function BoxesPage() {
               key={b.id}
               className={`flex flex-col rounded-[2rem] p-7 shadow-pop ${featured ? "bg-orange text-white" : "bg-cream"}`}
             >
+              {b.image && (
+                <div className="-mx-2 mb-5 overflow-hidden rounded-3xl bg-white">
+                  <Image
+                    src={b.image}
+                    alt={`${b.nameAr} · ${b.nameEn}`}
+                    width={800}
+                    height={800}
+                    className="aspect-[4/3] w-full object-contain p-2"
+                  />
+                </div>
+              )}
               <p className={`text-sm font-bold ${featured ? "text-cream" : "text-leaf"}`}>
                 {b.subtitleAr} · <span lang="en">{b.subtitleEn}</span>
               </p>

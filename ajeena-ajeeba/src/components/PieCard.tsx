@@ -1,4 +1,5 @@
 import type { Pie } from "@/data/menu";
+import Image from "next/image";
 import PieArt from "./PieArt";
 
 export default function PieCard({ pie, category }: { pie: Pie; category: string }) {
@@ -9,7 +10,19 @@ export default function PieCard({ pie, category }: { pie: Pie; category: string 
           {pie.tag.ar} · <span lang="en">{pie.tag.en}</span>
         </span>
       )}
-      <PieArt category={category} className="mx-auto mb-3 h-24 w-36" />
+      {pie.image ? (
+        <Image
+          src={pie.image}
+          alt={`${pie.nameAr} · ${pie.nameEn}`}
+          width={600}
+          height={600}
+          className="mx-auto -mt-2 mb-1 aspect-[4/3] w-full object-contain"
+        />
+      ) : (
+        <div className="mb-1 flex aspect-[4/3] w-full items-center justify-center">
+          <PieArt category={category} className="h-24 w-36" />
+        </div>
+      )}
       <h3 className="text-xl font-extrabold">{pie.nameAr}</h3>
       <p lang="en" dir="ltr" className="text-end text-sm font-semibold text-brick sm:text-start">
         {pie.nameEn}

@@ -12,6 +12,7 @@ export type Pie = {
   fillingEn: string;
   fillingAr: string;
   tag?: { en: string; ar: string };
+  image?: string;
 };
 
 export type MenuCategory = {
@@ -63,6 +64,7 @@ export const menu: MenuCategory[] = [
       },
       {
         id: "chicken-kishna",
+    image: "/menu/chicken-kishna.jpg",
         nameEn: "Chicken with Kishna Pie",
         nameAr: "فطيرة الدجاج مع الكشنة",
         price: 7,
@@ -75,6 +77,7 @@ export const menu: MenuCategory[] = [
       },
       {
         id: "egg-beef",
+    image: "/menu/egg-beef.jpg",
         nameEn: "Egg with Beef Pie",
         nameAr: "فطيرة البيض مع اللحم",
         price: 8,
@@ -104,6 +107,7 @@ export const menu: MenuCategory[] = [
     items: [
       {
         id: "beef-shawarma",
+    image: "/menu/beef-shawarma.jpg",
         nameEn: "Beef Shawarma Pie",
         nameAr: "فطيرة شاورما اللحم",
         price: 12,
@@ -197,11 +201,13 @@ export type Box = {
   calories: number;
   protein: number;
   contents: { pieId: string; qty: number }[];
+  image?: string;
 };
 
 export const boxes: Box[] = [
   {
     id: "khafayef",
+    image: "/boxes/box-9.jpg",
     nameEn: "Al Khafayef Assortment",
     nameAr: "تشكيلة الخفايف",
     subtitleEn: "Delight Box",
@@ -219,6 +225,7 @@ export const boxes: Box[] = [
   },
   {
     id: "ajebah",
+    image: "/boxes/box-12.jpg",
     nameEn: "Ajebah Assortment",
     nameAr: "تشكيلة عجيبة",
     subtitleEn: "Breakfast Box",
@@ -239,6 +246,7 @@ export const boxes: Box[] = [
   },
   {
     id: "chef",
+    image: "/boxes/box-12.jpg",
     nameEn: "The Chef's Assortment",
     nameAr: "تشكيلة الشيف",
     subtitleEn: "Premium Box",
