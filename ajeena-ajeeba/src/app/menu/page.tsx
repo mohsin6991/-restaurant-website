@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PieCard from "@/components/PieCard";
-import { menu, drinks } from "@/data/menu";
+import BoxCard from "@/components/BoxCard";
+import { menu, drinks, boxes } from "@/data/menu";
 
 export const metadata: Metadata = { title: "المنيو | Ajeena Ajeeba Menu" };
 
@@ -9,13 +10,16 @@ export default function MenuPage() {
     <div className="mx-auto max-w-6xl px-4 py-12">
       <header className="text-center">
         <h1 className="text-4xl font-extrabold">المنيو</h1>
-        <p lang="en" className="text-brown/70">Our Menu · all prices in SR</p>
+        <p lang="en" className="text-brown/70">Our Menu · all prices in SR (delivery-app prices)</p>
         <nav className="mt-6 flex flex-wrap justify-center gap-2">
           {menu.map((c) => (
             <a key={c.id} href={`#${c.id}`} className="rounded-full bg-cream px-4 py-2 font-bold text-brick hover:bg-orange hover:text-white">
               {c.titleAr}
             </a>
           ))}
+          <a href="#boxes" className="rounded-full bg-cream px-4 py-2 font-bold text-brick hover:bg-orange hover:text-white">
+            البوكسات
+          </a>
           <a href="#drinks" className="rounded-full bg-cream px-4 py-2 font-bold text-brick hover:bg-orange hover:text-white">
             المشروبات
           </a>
@@ -35,6 +39,18 @@ export default function MenuPage() {
           </div>
         </section>
       ))}
+
+      <section id="boxes" className="scroll-mt-28 pt-14">
+        <div className="mb-8 flex items-baseline gap-3 border-b-4 border-orange pb-2">
+          <h2 className="text-3xl font-extrabold">البوكسات</h2>
+          <span lang="en" className="text-brick">Sharing Boxes</span>
+        </div>
+        <div className="grid gap-8 lg:grid-cols-3">
+          {boxes.map((b, i) => (
+            <BoxCard key={b.id} box={b} featured={i === boxes.length - 1} />
+          ))}
+        </div>
+      </section>
 
       <section id="drinks" className="scroll-mt-28 pt-14">
         <div className="mb-8 flex items-baseline gap-3 border-b-4 border-orange pb-2">

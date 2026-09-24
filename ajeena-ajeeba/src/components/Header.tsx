@@ -4,7 +4,6 @@ import Logo from "./Logo";
 const links = [
   { href: "/", ar: "الرئيسية", en: "Home" },
   { href: "/menu", ar: "المنيو", en: "Menu" },
-  { href: "/boxes", ar: "البوكسات", en: "Boxes" },
   { href: "/branches", ar: "فروعنا", en: "Branches" },
 ];
 

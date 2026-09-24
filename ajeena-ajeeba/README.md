@@ -7,8 +7,7 @@ Built on the same stack as the reference project in the repo root: Next.js 15 (A
 | Route | Content |
 |---|---|
 | `/` | Hero, key facts, favourite pies, boxes teaser |
-| `/menu` | Breakfast, premium and dessert fatayer + drinks, with price, calories and protein per piece |
-| `/boxes` | The three sharing assortments with contents, price and saving |
+| `/menu` | Breakfast, premium and dessert fatayer, sharing boxes and drinks, with price, calories and protein (`/boxes` redirects to `/menu#boxes`) |
 | `/branches` | Branch list (empty until real data is added) + delivery apps |
 
 ## Run

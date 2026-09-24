@@ -34,7 +34,7 @@ export default function Home() {
               <Link href="/menu" className="rounded-full bg-brick px-7 py-3 text-lg font-bold text-cream shadow-lg transition hover:scale-105">
                 شوف المنيو · <span lang="en">See the menu</span>
               </Link>
-              <Link href="/boxes" className="rounded-full border-2 border-cream px-7 py-3 text-lg font-bold transition hover:bg-cream hover:text-brick">
+              <Link href="/menu#boxes" className="rounded-full border-2 border-cream px-7 py-3 text-lg font-bold transition hover:bg-cream hover:text-brick">
                 البوكسات · <span lang="en">Boxes</span>
               </Link>
             </div>
@@ -89,7 +89,7 @@ export default function Home() {
           <div>
             <h2 className="text-3xl font-extrabold">جمعة الأهل والشلة؟ عليك بالبوكس</h2>
             <p lang="en" className="mt-2 opacity-90">Sharing boxes for family, friends and the office.</p>
-            <Link href="/boxes" className="mt-6 inline-block rounded-full bg-orange px-6 py-3 font-bold text-white transition hover:bg-brick">
+            <Link href="/menu#boxes" className="mt-6 inline-block rounded-full bg-orange px-6 py-3 font-bold text-white transition hover:bg-brick">
               اختر بوكسك · <span lang="en">Pick your box</span>
             </Link>
           </div>
