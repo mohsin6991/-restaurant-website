@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff8ee;
+  color: #301d10;
+}
+
+/* Light brand pattern texture (dots + wheat-like dashes) — kept low visual weight */
+.bg-pattern {
+  background-color: #ed9c35;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255, 233, 201, 0.18) 2px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(255, 233, 201, 0.14) 3px, transparent 4px);
+  background-size: 48px 48px, 72px 72px;
+}
+
+.logo-3d {
+  color: #ffe9c9;
+  text-shadow:
+    1px 1px 0 #ca472e,
+    2px 2px 0 #ca472e,
+    3px 3px 0 #ca472e,
+    4px 4px 0 #ca472e;
+}
+
+/* English lines inside the RTL page: let each paragraph resolve its own direction */
+[lang="en"] {
+  unicode-bidi: plaintext;
+}
